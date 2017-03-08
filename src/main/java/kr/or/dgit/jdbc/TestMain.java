@@ -15,7 +15,7 @@ public class TestMain {
 		StudentService service = StudentService.getInstance();
 		Student student = new Student();
 		student.setStudentId(1);
-		student.setName("이준욱");
+		student.setName("김자바");
 		student.setEmail("kjv@test.co.kr");
 		student.setDob(new Date());
 		

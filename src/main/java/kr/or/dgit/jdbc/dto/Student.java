@@ -7,6 +7,17 @@ public class Student {
 	private String name;
 	private String email;
 	private Date dob;
+	
+	public Student() {}
+
+	public Student(int studentId, String name, String email, Date dob) {
+		super();
+		this.studentId = studentId;
+		this.name = name;
+		this.email = email;
+		this.dob = dob;
+	}
+	
 	public int getStudentId() {
 		return studentId;
 	}
