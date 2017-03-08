@@ -1,13 +1,13 @@
 package kr.or.dgit.jdbc;
 
 import java.util.Date;
-
+import java.util.List;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.junit.Assert;
 import kr.or.dgit.jdbc.dto.Student;
 import kr.or.dgit.jdbc.service.StudentService;
 
@@ -29,5 +29,14 @@ public class StudentServiceTest {
 		Student insStudent = new Student(1, "김자바", "kjv@test.co.kr", new Date());
 		int res = studentService.insertStudent(insStudent);
 		Assert.assertEquals(1, res);
+	}
+	
+	@Test
+	public void testfindAllStudents(){
+		List<Student> lists = studentService.findAllStudents();
+		for(Student s : lists){
+			System.out.println(s);
+		}
+		Assert.assertNotNull(lists);
 	}
 }
